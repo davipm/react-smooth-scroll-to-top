@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './ScrollToTop.css';
 
-export default function ScrollToTop({ visibleAt, right, bottom }) {
+export default function ScrollToTop({ visibleAt, right, bottom, color }) {
   const [visibleOffset] = useState(visibleAt || 300);
   const [visible, setVisible] = useState(false);
 
@@ -28,19 +28,25 @@ export default function ScrollToTop({ visibleAt, right, bottom }) {
     window.smoothScroll();
   };
 
-  const newStyle = {
+  const position = {
     right: right,
-    bottom: bottom
+    bottom: bottom,
+    opacity: visible ? '1' : '',
+  };
+
+  const newColor = {
+    backgroundColor: color,
   };
 
   return (
     <div
-      className={`btn-back-to-top ${visible ? 'show-btn': ''}`}
+      /*className={`btn-back-to-top ${visible ? 'show-btn': ''}`}*/
+      className="btn-back-to-top"
       id="backToTop"
-      style={newStyle}
+      style={position}
       onClick={backToTop}
     >
-      <div className="default">
+      <div className="default" style={newColor}>
         <span>
           <i className="fa fa-chevron-up" aria-hidden="true" />
         </span>

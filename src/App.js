@@ -11,12 +11,18 @@ function App() {
           href="https://github.com/davi-94/react-smooth-scroll-to-top"
           target="_blank" rel="noreferrer noopener">
           Github Repository {' '}
-          <i className="fa fa-github" aria-hidden="true"></i>
+          <i className="fa fa-github" aria-hidden="true" />
         </a>
       </div>
       <div className="box item-2" id="item2"></div>
       <div className="box item-3" id="item3"></div>
-      <ScrollToTop />
+
+      <ScrollToTop
+        visibleAt={300}
+        right={30}
+        bottom={40}
+        color={`#98A6D4`}
+      />
     </main>
   );
 }

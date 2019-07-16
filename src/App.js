@@ -1,25 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main id="app">
+      <div className="box item-1" id="item1">
+        <h1>React Smooth Scroll Top</h1>
+        <a href="#top">Github Repository <i className="fa fa-github" aria-hidden="true"></i></a>
+      </div>
+      <div className="box item-2" id="item2"></div>
+      <div className="box item-3" id="item3"></div>
+      <ScrollToTop />
+    </main>
   );
 }
 

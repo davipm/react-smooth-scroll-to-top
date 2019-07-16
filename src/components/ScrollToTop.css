@@ -1,0 +1,48 @@
+/**
+ *
+ */
+
+.btn-back-to-top {
+  position: fixed;
+  right: 30px;
+  bottom: 40px;
+  z-index: 1000;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: all .15s ease-in-out;
+  -moz-transition: all .15s ease-in-out;
+  -ms-transition: all .15s ease-in-out;
+  -o-transition: all .15s ease-in-out;
+  transition: all .15s ease-in-out;
+}
+
+.btn-back-to-top .default {
+  width: 40px;
+  height: 35px;
+  padding-top: 5px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 30px;
+  background-color: #98A6D4;
+  border-radius: 3px;
+  opacity: .6;
+
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+.btn-back-to-top .default span {
+  color: #fff;
+}
+
+.btn-back-to-top .default:hover {
+  opacity: 1;
+}
+
+.show-btn {
+  opacity: 1;
+}
+

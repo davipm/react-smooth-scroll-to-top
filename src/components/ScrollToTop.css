@@ -34,12 +34,12 @@
   transition: all .3s ease-in-out;
 }
 
-.btn-back-to-top .default span {
-  color: #fff;
-}
-
 .btn-back-to-top .default:hover {
   opacity: 1;
+}
+
+.btn-back-to-top .default span {
+  color: #fff;
 }
 
 .show-btn {

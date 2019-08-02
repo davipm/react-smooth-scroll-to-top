@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import { CSSTransition } from 'react-transition-group';
 import './ScrollToTop.css';
 
-export default function ScrollToTop({ visibleAt, right, bottom, color }) {
-  const [visibleOffset] = useState(visibleAt || 300);
+export default function ScrollToTop({ visibleAt = 300, right = '30px', bottom = '40px', color }) {
+  const [visibleOffset] = useState(visibleAt);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -14,14 +15,11 @@ export default function ScrollToTop({ visibleAt, right, bottom, color }) {
       }
     };
     window.addEventListener('scroll', catchScroll);
-
-    return () => {
-      window.removeEventListener('scroll', catchScroll);
-    }
+    return () => window.removeEventListener('scroll', catchScroll);
   });
 
-  let catchScroll = () => {
-    setVisible(window.pageYOffset > parseInt(visibleOffset));
+  const catchScroll = () => {
+    setVisible(window.pageYOffset > visibleOffset);
   };
 
   const backToTop = () => {
@@ -31,7 +29,6 @@ export default function ScrollToTop({ visibleAt, right, bottom, color }) {
   const position = {
     right: right,
     bottom: bottom,
-    opacity: visible ? '1' : '',
   };
 
   const newColor = {
@@ -39,18 +36,26 @@ export default function ScrollToTop({ visibleAt, right, bottom, color }) {
   };
 
   return (
-    <div
-      /*className={`btn-back-to-top ${visible ? 'show-btn': ''}`}*/
-      className="btn-back-to-top"
-      id="backToTop"
-      style={position}
-      onClick={backToTop}
-    >
-      <div className="default" style={newColor}>
-        <span>
-          <i className="fa fa-chevron-up" aria-hidden="true" />
-        </span>
-      </div>
-    </div>
+    <>
+      <CSSTransition
+        in={visible}
+        timeout={300}
+        classNames="btn-back-to-top"
+        unmountOnExit
+      >
+        <div
+          className="btn-back-to-top"
+          id="backToTop"
+          style={position}
+          onClick={backToTop}
+        >
+          <div className="default" style={newColor}>
+            <span>
+              <i className="fa fa-chevron-up" aria-hidden="true" />
+            </span>
+          </div>
+        </div>
+      </CSSTransition>
+    </>
   )
 }

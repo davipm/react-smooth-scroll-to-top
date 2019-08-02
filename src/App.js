@@ -16,13 +16,8 @@ function App() {
       </div>
       <div className="box item-2" id="item2"></div>
       <div className="box item-3" id="item3"></div>
-
-      <ScrollToTop
-        visibleAt={300}
-        right={30}
-        bottom={40}
-        color={`#98A6D4`}
-      />
+      {/* scroll to top component */}
+      <ScrollToTop />
     </main>
   );
 }

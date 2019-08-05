@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import './ScrollToTop.css';
+import './ScrollToTop.scss';
 
 export default function ScrollToTop({ visibleAt = 300, right = '30px', bottom = '40px', color }) {
   const [visibleOffset] = useState(visibleAt);

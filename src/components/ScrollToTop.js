@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import './ScrollToTop.scss';
 
-export default function ScrollToTop({ visibleAt = 300, right = '30px', bottom = '40px', color }) {
+export default function ScrollToTop({visibleAt = 300, right = '30px', bottom = '40px', color }) {
   const [visibleOffset] = useState(visibleAt);
   const [visible, setVisible] = useState(false);
 
@@ -26,13 +26,14 @@ export default function ScrollToTop({ visibleAt = 300, right = '30px', bottom = 
     window.smoothScroll();
   };
 
-  const position = {
-    right: right,
-    bottom: bottom,
-  };
-
-  const newColor = {
-    backgroundColor: color,
+  const styles = {
+    position: {
+      right: right,
+      bottom: bottom
+    },
+    newColor: {
+      backgroundColor: color
+    }
   };
 
   return (
@@ -46,10 +47,10 @@ export default function ScrollToTop({ visibleAt = 300, right = '30px', bottom = 
         <div
           className="btn-back-to-top"
           id="backToTop"
-          style={position}
+          style={styles.position}
           onClick={backToTop}
         >
-          <div className="default" style={newColor}>
+          <div className="default" style={styles.newColor}>
             <span>
               <i className="fa fa-chevron-up" aria-hidden="true" />
             </span>

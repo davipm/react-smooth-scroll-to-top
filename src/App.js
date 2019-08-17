@@ -14,8 +14,8 @@ function App() {
           <i className="fa fa-github" aria-hidden="true" />
         </a>
       </div>
-      <div className="box item-2" id="item2"></div>
-      <div className="box item-3" id="item3"></div>
+      <div className="box item-2" id="item2" />
+      <div className="box item-3" id="item3" />
       {/* scroll to top component */}
       <ScrollToTop />
     </main>

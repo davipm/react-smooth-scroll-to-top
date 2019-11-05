@@ -3,6 +3,13 @@ import { CSSTransition } from "react-transition-group";
 import PropTypes from "prop-types";
 import "./ScrollToTop.scss";
 
+ScrollToTop.prototype = {
+  visibleAt: PropTypes.number.isRequired,
+  right: PropTypes.string.isRequired,
+  bottom: PropTypes.string.isRequired,
+  color: PropTypes.string
+};
+
 export default function ScrollToTop({
   color,
   visibleAt = 300,
@@ -67,10 +74,3 @@ export default function ScrollToTop({
     </>
   );
 }
-
-ScrollToTop.prototype = {
-  visibleAt: PropTypes.number.isRequired,
-  right: PropTypes.string.isRequired,
-  bottom: PropTypes.string.isRequired,
-  color: PropTypes.string
-};

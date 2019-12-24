@@ -2,11 +2,15 @@
 
 body {
   margin: 0;
-  font-size: 1rem;
+  padding: 0;
+  font-size: 16px;
   font-weight: normal;
   font-style: normal;
   font-family: 'Source Sans Pro', sans-serif;
+  text-align: left;
+  line-height: 1.5;
   color: #44344F;
+  background-color: #FFFFFF;
 }
 
 h1 {

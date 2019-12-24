@@ -1,5 +1,5 @@
-import React from 'react';
-import ScrollToTop from './components/ScrollToTop';
+import React from "react";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   return (
@@ -9,9 +9,10 @@ function App() {
         <h3>Scroll the page</h3>
         <a
           href="https://github.com/davi-94/react-smooth-scroll-to-top"
-          target="_blank" rel="noreferrer noopener">
-          Github Repository {' '}
-          <i className="fa fa-github" aria-hidden="true" />
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Github Repository <i className="fa fa-github" aria-hidden="true" />
         </a>
       </div>
       <div className="box item-2" id="item2" />

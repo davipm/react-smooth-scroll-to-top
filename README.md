@@ -4,21 +4,35 @@ React.js component for smooth scroll top page [Demo](https://react-smooth-scroll
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Installing
 
 ```
-npm install
+npm i react-smooth-scroll-to-top
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Deployment
+## Import and use
 
+on a single component
+```javascript
+import ScrollToTop from './ScrollToTop';
+
+<div>
+  <ScrollToTop />
+</div>
 ```
-npm run build
-```
+
+## Props
+
+| Name                    | Type             | Default         | Description                                                              |
+|-------------------------|------------------|-----------------|--------------------------------------------------------------------------|
+| children                | Component        | ^               | Arrow up with CSS                                                        |
+| color                   | String           | #98a6d4         | Background color of component                                            |
+| right                   | String or Number | 30px            | Where the component should visible when user scroll reach certain bottom offset |
+| bottom                  | String or Number | 40px            | Bottom position of the component                                         |
+| visibleAt               | Number           | 300             | Right position of the component                                          |
 
 ## Built With
 

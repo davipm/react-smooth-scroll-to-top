@@ -28,11 +28,11 @@ import ScrollToTop from './ScrollToTop';
 
 | Name                    | Type             | Default         | Description                                                              |
 |-------------------------|------------------|-----------------|--------------------------------------------------------------------------|
-| children                | Component        | ^               | Arrow up with CSS                                                        |
+| children                | Component        | ^               | Arrow up icon                                                        |
 | color                   | String           | #98a6d4         | Background color of component                                            |
-| right                   | String or Number | 30px            | Where the component should visible when user scroll reach certain bottom offset |
+| right                   | String or Number | 30px            | Right position of the component  |
 | bottom                  | String or Number | 40px            | Bottom position of the component                                         |
-| visibleAt               | Number           | 300             | Right position of the component                                          |
+| visibleAt               | Number           | 300             | Where the component should visible when user scroll reach certain bottom offset |
 
 ## Built With
 
@@ -44,7 +44,4 @@ import ScrollToTop from './ScrollToTop';
 ## Authors
 
 * **Davi Pereira**
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+###### build in 2018

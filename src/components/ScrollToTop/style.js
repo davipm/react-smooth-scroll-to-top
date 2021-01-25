@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
+import styled, { css } from "styled-components/macro";
 
 export const BackToTop = styled.div`
   position: fixed;
-  right: ${props => props.right || "30px"};
-  bottom: ${props => props.bottom || "40px"};
+  right: ${({ right }) => right}px;
+  bottom: ${({ bottom }) => bottom}px;
   z-index: 1000;
   cursor: pointer;
   user-select: none;
@@ -48,7 +48,7 @@ export const Default = styled.div`
   color: #fff;
   text-align: center;
   line-height: 30px;
-  background-color: ${props => props.bgColor || "#98a6d4"};
+  background-color: ${({ bgColor }) => bgColor};
   border-radius: 0.3rem;
   opacity: 0.6;
   transition: all 0.15s ease-in-out;

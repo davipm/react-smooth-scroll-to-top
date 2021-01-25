@@ -1,7 +1,9 @@
 import React from "react";
+
+import Global from "./styles/global";
 import ScrollToTop from "./components/ScrollToTop";
 
-function App() {
+export default function App() {
   return (
     <main id="app">
       <div className="box item-1" id="item1">
@@ -17,10 +19,11 @@ function App() {
       </div>
       <div className="box item-2" id="item2" />
       <div className="box item-3" id="item3" />
+
       {/* scroll to top component */}
       <ScrollToTop />
+
+      <Global />
     </main>
   );
 }
-
-export default App;
